@@ -45,7 +45,7 @@
 
  @media (max-width: 768px) {
   .navList {
-    flex-direction: column;
+    /*flex-direction: column;*/
     gap: 15px;
     font-size: 18px;
     justify-content: center;
