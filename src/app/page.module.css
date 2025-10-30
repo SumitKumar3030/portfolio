@@ -48,6 +48,12 @@
   color: #cbd5e1;
 }
 
+.card p {
+  text-align: left; /* fixes uneven word spacing */
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
 /* SKILLS */
 .skills {
   display: flex;
@@ -95,6 +101,13 @@
 .card p {
   color: #cbd5e1;
   line-height: 1.5;
+}
+
+.techStack {
+  font-weight: 500;
+  color: #e5e7eb;
+  margin-bottom: 8px; /* adds space between tech stack and desc */
+  font-size: 0.95rem;
 }
 
 .card a {

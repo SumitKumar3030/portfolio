@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 
 type Project = {
   title: string;
+  techStack?: string;
   desc: string;
   url: string;
 };
@@ -23,18 +24,33 @@ type Certificate = {
 
 const projects: Project[] = [
   {
-    title: "Cancer & Diet App",
-    desc: "Next.js + Prisma + PostgreSQL — Personalized diet plans for cancer patients.",
-    url: "https://yourproject1.vercel.app",
+    title: "Sentiment Analysis for BlackCoffer",
+    techStack: "Python, Pandas, Numpy, NLTK.",
+    desc: "Analyzed articles to determine positive or negative sentiments using Python, Pandas, Numpy, and NLTK.",
+    url: "portfolio-three-iota-kh00uc8d7m.vercel.app",
   },
   {
-    title: "Resume Builder",
-    desc: "React app to create and download resumes as PDFs.",
+  title: "Portfolio Website",
+  techStack: "Next.js, TypeScript, Tailwind CSS.",
+  desc: "Personal portfolio built with Next.js and TypeScript to showcase my projects, experience, and skills. Styled with Tailwind CSS and deployed on Vercel.",
+  url: "https://portfolio-three-iota-kh00uc8d7m.vercel.app/",
+  },
+  {
+    title: "Electronics eCommerce Store",
+    techStack: "Next.js, MySQL, Node.js, Prisma.",
+    desc: "Developed an e-commerce platform using Next.js and MySQL, improving loading time by 30% and integrating admin dashboard for seamless inventory management.",
     url: "https://github.com/yourusername/resume-builder",
   },
   {
-    title: "E-commerce API",
-    desc: "Node.js + Express + PostgreSQL REST API.",
+    title: "Image Caption Generator using Deep Learning",
+    techStack: "Python, TensorFlow, Keras, CNN, LSTM.",
+    desc: "Created an image caption generator using deep learning techniques like CNN and LSTM, achieving 85% accuracy on test datasets.",
+    url: "https://github.com/yourusername/resume-builder",
+  },
+  {
+    title: "CRUD",
+    techStack: "React.js,Node.js, SQl",
+    desc: "A web application that allows users to perform Create, Read, Update, and Delete operations on a database using React.js for the frontend and SQL for the backend.",
     url: "https://github.com/yourusername/ecommerce-api",
   },
 ];
@@ -58,21 +74,39 @@ const experiences: Experience[] = [
 
 const certificates: Certificate[] = [
   {
+    title: "Web Development",
+    provider: "InternShala",
+    link: "https://trainings.internshala.com/verify-certificate/?certificate_number=1EF0D84C-BA4D-8304-9EC6-DAF3BDD48FFB",
+  },
+  {
+    title: "Angular, Typescript and Typescript Essentials",
+    provider: "Infosys Springboard",
+    link: "https://drive.google.com/drive/folders/1rDt1EGXYja08fTSZB7WBi7ovheXytsUV?usp=sharing",
+  },
+  {
     title: "Google Data Analytics",
     provider: "Coursera",
-    link: "https://www.coursera.org/professional-certificates/google-data-analytics",
+    link: "https://drive.google.com/drive/folders/105xAETxuIoSTFJfAqukZ39RgrpCgJAo6?usp=sharing",
   },
   {
     title: "Machine Learning",
     provider: "Coursera",
+    link: "https://coursera.org/share/b722d35676ab812eda0f94b2dc52f4dc",
   },
   {
-    title: "Digital Marketing & E-commerce",
-    provider: "Google",
+    title: "Computer Vision for Engineering and Science",
+    provider: "Coursera",
+    link: "https://coursera.org/share/066daa54675f85a782191ab118fe6fac"
+  },
+  {
+    title: "Introduction to H2O using Python Infosys Springboard",
+    provider: "Infosys Springboard",
+    link: "https://drive.google.com/file/d/1I6evni3hRpDaKf3sDdf1UgPRWPyLNjhg/view?usp=sharing",
   },
   {
     title: "Creative and Critical Thinking",
     provider: "Coursera",
+    link: "https://drive.google.com/drive/folders/1CqhBla6lDDNXKjxPl4M3naCukZN1DScD?usp=sharing",
   },
 ];
 
@@ -80,7 +114,7 @@ export default function Home() {
   return (
     <>
     <Navbar/>
-    <main className={styles.main}>
+    <main className={styles.main} id = "about">
       <header className={styles.header}>
         <Image
           src="/profile.jpg"
@@ -109,7 +143,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className={styles.section}>
+      <section className={styles.section} id ="skills">
         <h2>Skills</h2>
         <ul className={styles.skills}>
           {[
@@ -129,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section className={styles.section}>
+      <section className={styles.section} id ="experience">
         <h2>Experience</h2>
         <div className={styles.projects}>
           {experiences.map((exp) => (
@@ -144,12 +178,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section className={styles.section} id = "projects">
         <h2>Projects</h2>
         <div className={styles.projects}>
           {projects.map((p) => (
             <div key={p.title} className={styles.card}>
               <h3>{p.title}</h3>
+              {p.techStack && <p className={styles.techStack}><strong>Tech Stack:</strong> {p.techStack}</p>}
               <p>{p.desc}</p>
               <a href={p.url} target="_blank" rel="noreferrer">
                 View Project
@@ -160,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* Certifications Section */}
-      <section className={styles.section}>
+      <section className={styles.section} id = "certifications">
         <h2>Certifications</h2>
         <ul className={styles.certList}>
           {certificates.map((c) => (
@@ -177,12 +212,18 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className={styles.section}>
+      <section className={styles.section} id = "contacts">
         <h2>Contact</h2>
         <p>
           Email:{" "}
-          <a href="mailto:stva3030@gmail.com">
+          <a href="https://mail.google.com/mail/" target="_blank">
             stva3030@gmail.com
+          </a>
+        </p>
+        <p>
+          Phone:{" "}
+          <a href="mailto:9671658070">
+            +91 9671658070
           </a>
         </p>
         <p>

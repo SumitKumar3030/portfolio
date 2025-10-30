@@ -7,12 +7,10 @@ export default function Navbar() {
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#skills">SKILLS</a></li>
         <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#certifications">CERTIFICATION</a></li>
         <li>
-          <a href="mailto:stva3030@gmail.com">Email</a>
-        </li>
-        <li>
-          <a href="tel:+919671658070">Phone</a>
+          <a href="#contacts">CONTACTS</a>
         </li>
         <li>
           <a href="https://github.com/SumitKumar3030" target="_blank" rel="noreferrer">
@@ -20,11 +18,6 @@ export default function Navbar() {
           </a>
         </li>
       </ul>
-      <div className={styles.about}>
-        <p>
-          I'm a passionate Full Stack Developer and Python Developer with hands-on experience in building web applications and analytical tools using modern technologies like Next.js, React, Node.js, Python, and SQL.
-        </p>
-      </div>
     </nav>
   );
 }
