@@ -1,3 +1,5 @@
+import { FaReact, FaPython, FaNodeJs, FaDatabase, FaGitAlt } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql } from "react-icons/si";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./navbar";
@@ -148,6 +150,21 @@ export default function Home() {
           into real-world digital solutions.
         </p>
       </section>
+
+    <section className={styles.section} id="techstack">
+      <h2>Tech Stack</h2>
+      <div className={styles.techIcons}>
+        <FaReact title="React" />
+        <SiNextdotjs title="Next.js" />
+        <SiTypescript title="TypeScript" />
+        <FaPython title="Python" />
+        <FaNodeJs title="Node.js" />
+        <SiTailwindcss title="Tailwind CSS" />
+        <SiPostgresql title="PostgreSQL" />
+        <FaGitAlt title="Git" />
+      </div>
+    </section>
+
 
       <section className={styles.section} id ="skills">
         <h2>Skills</h2>

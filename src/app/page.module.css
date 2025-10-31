@@ -160,3 +160,25 @@
   color: #9aa4b2;
   font-size: 14px;
 }
+
+.techIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #00adb5;
+  margin-top: 15px;
+}
+
+.techIcons svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.techIcons svg:hover {
+  transform: scale(1.2);
+  color: #00fff5;
+}
+
