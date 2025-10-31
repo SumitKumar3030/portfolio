@@ -36,6 +36,12 @@ const projects: Project[] = [
   url: "https://portfolio-three-iota-kh00uc8d7m.vercel.app/",
   },
   {
+  title: "Weather Now",
+  techStack: "React, OpenWeather API, JavaScript, CSS",
+  desc: "A web application that shows real-time weather updates for any city using the OpenWeather API. It displays temperature, humidity, and weather conditions in a responsive interface.",
+  url: "https://weather-now-liart-eta.vercel.app/",
+  },
+  {
     title: "Electronics eCommerce Store",
     techStack: "Next.js, MySQL, Node.js, Prisma.",
     desc: "Developed an e-commerce platform using Next.js and MySQL, improving loading time by 30% and integrating admin dashboard for seamless inventory management.",
