@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "Sentiment Analysis for BlackCoffer",
     techStack: "Python, Pandas, Numpy, NLTK.",
     desc: "Analyzed articles to determine positive or negative sentiments using Python, Pandas, Numpy, and NLTK.",
-    url: "portfolio-three-iota-kh00uc8d7m.vercel.app",
+    url: "https://github.com/SumitKumar3030/Sentiment-Analysis",
   },
   {
   title: "Portfolio Website",
