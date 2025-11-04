@@ -1,80 +1,220 @@
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(20, 20, 30, 0.95);
-  padding: 10px 0;
-  z-index: 100;
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 0;
+  z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* --- NAVIGATION LIST --- */
+.navbar.scrolled {
+  background: rgba(20, 20, 30, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logoDot {
+  color: #818cf8;
+  -webkit-text-fill-color: #818cf8;
+}
+
+/* NAVIGATION LIST */
 .navList {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: nowrap; /* stays horizontal */
-  gap: 35px;
+  flex-wrap: wrap;
+  gap: 32px;
   list-style: none;
-  padding: 0 20px;
+  padding: 0;
   margin: 0;
-  font-size: 20px;
+}
+
+.navList li {
+  position: relative;
 }
 
 .navList a {
   color: #cbd5e1;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
-  white-space: nowrap; /* prevents wrapping */
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.navList a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
 }
 
 .navList a:hover {
   color: #818cf8;
+  background: rgba(129, 140, 248, 0.1);
 }
 
-/* --- ABOUT SECTION (below navbar) --- */
-.about {
-  margin-top: 8px;
-  max-width: 700px;
-  text-align: center;
-  color: #cbd5e1;
-  font-size: 0.95rem;
-  line-height: 1.4;
+.navList a:hover::after {
+  width: 100%;
 }
 
-.about p {
-  text-align: justify;
+/* GITHUB LINK */
+.githubLink {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%) !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 768px) {
+.githubLink::after {
+  display: none;
+}
+
+.githubLink:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 968px) {
   .navList {
-    gap: 18px;
+    gap: 20px;
   }
 
   .navList a {
-    font-size: 16px;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .navList {
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .navList a {
+    font-size: 0.85rem;
+    padding: 6px 8px;
   }
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    padding: 10px 0;
+  }
+
   .navList {
-    gap: 12px;
-    padding: 0 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .navList a {
-    font-size: 14px;
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+
+  .githubLink {
+    padding: 6px 12px !important;
   }
 }
 
 @media (max-width: 450px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
   .navList {
     gap: 8px;
-    padding: 0 8px;
   }
 
   .navList a {
-    font-size: 12px;
+    font-size: 0.75rem;
+    padding: 4px 6px;
   }
+
+  .githubLink {
+    padding: 5px 10px !important;
+    font-size: 0.75rem;
+  }
+}
+
+/* Add after .githubLink styles */
+
+.resumeBtn {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  color: white !important;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resumeBtn::after {
+  display: none;
+}
+
+.resumeBtn:hover {
+  background: linear-gradient(135deg, #10b981 0%, #34d399 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
 }
