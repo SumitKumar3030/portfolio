@@ -1,3 +1,41 @@
+/* Add at the very top */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(
+    -45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 16px;
+  color: #1a202c;
+  font-family: Inter, system-ui, sans-serif;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
 /* Base Styles */
 html {
   scroll-behavior: smooth;
@@ -12,7 +50,8 @@ body {
   max-width: 960px;
   margin: 40px auto;
   padding: 16px;
-  color: #e6eef8;
+  color: #000;
+  /*color: #e6eef8;*/
   font-family: Inter, system-ui, sans-serif;
 }
 
@@ -75,7 +114,7 @@ body {
 .section:nth-child(6) { animation-delay: 0.6s; }
 
 .section h2 {
-  color: #f3f4f6;
+  color: #000;
   margin-bottom: 20px;
   font-size: 1.6rem;
   display: flex;
@@ -104,18 +143,19 @@ body {
 .section p {
   text-align: justify;
   line-height: 1.8;
-  color: #cbd5e1;
+  color: #000;
+  /*color: #cbd5e1;*/
   font-size: 1rem;
 }
 
 .card p {
   text-align: left;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: #000;
 }
 
 .company {
-  color: #9aa4b2 !important;
+  color: #000 !important;
   font-size: 0.95rem !important;
   margin: 8px 0 !important;
 }
@@ -134,7 +174,7 @@ body {
   background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(129, 140, 248, 0.1) 100%);
   padding: 10px 16px;
   border-radius: 10px;
-  color: #cbd5e1;
+  color: #000;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   cursor: default;
@@ -191,20 +231,20 @@ body {
 
 .card h3 {
   margin: 0 0 10px 0;
-  color: #f9fafb;
+  color: #000;
   font-size: 1.15rem;
   font-weight: 600;
 }
 
 .card p {
-  color: #cbd5e1;
+  color: #000;
   line-height: 1.6;
   margin-bottom: 8px;
 }
 
 .techStack {
   font-weight: 500;
-  color: #e5e7eb;
+  color: #000;
   margin-bottom: 10px;
   font-size: 0.9rem;
   padding: 8px 0;
@@ -266,7 +306,7 @@ body {
   background: rgba(255, 255, 255, 0.03);
   padding: 14px 16px;
   border-radius: 10px;
-  color: #cbd5e1;
+  color: #000;
   font-size: 0.95rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
@@ -286,7 +326,7 @@ body {
 }
 
 .certList a {
-  color: #818cf8;
+  color: #000;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -318,7 +358,7 @@ body {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  color: #cbd5e1;
+  color: #000;
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 500;
@@ -345,7 +385,7 @@ body {
 }
 
 .footer p {
-  color: #9aa4b2;
+  color: #000;
   font-size: 14px;
   margin: 0;
 }

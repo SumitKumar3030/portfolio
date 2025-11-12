@@ -55,7 +55,7 @@ export default function Navbar() {
           {/* Resume Download Button */}
           <li>
             <a
-              href="/resume.pdf"
+              href="/Resume_Sumitkumar.pdf"
               download="Sumit_Kumar_Resume.pdf"
               className={styles.resumeBtn}
             >
