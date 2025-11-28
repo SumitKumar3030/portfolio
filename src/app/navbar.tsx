@@ -52,6 +52,26 @@ export default function Navbar() {
               GitHub
             </a>
           </li>
+
+         <li>
+  <a
+    href="https://www.linkedin.com/in/sumit-kumar-dev3/"
+    target="_blank"
+    rel="noreferrer"
+    className={styles.linkedinLink}
+  >
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6C1.1 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.88 1 5 2.12 5 3.5H4.98ZM0.5 8H4.5V24H0.5V8ZM9 8H13V10.2H13.06C13.59 9.18 14.91 8 16.96 8C21.07 8 22 10.64 22 14.36V24H18V15.33C18 13.27 17.96 10.79 15.5 10.79C13 10.79 12.62 12.98 12.62 15.18V24H9V8Z" />
+    </svg>
+    LinkedIn
+  </a>
+</li>
+
           {/* Resume Download Button */}
           <li>
             <a
