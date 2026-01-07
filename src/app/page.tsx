@@ -130,7 +130,7 @@ export default function Home() {
       <main className={styles.main} id="about">
         <header className={styles.header}>
           <Image
-            src="/profile.jpg"
+            src="/profile1.jpg"
             alt="Sumit Kumar - Full Stack Developer"
             width={110}
             height={110}
